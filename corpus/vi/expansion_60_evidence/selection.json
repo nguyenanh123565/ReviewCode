@@ -1,0 +1,77 @@
+{
+  "source_manifest": "corpus/manifest.json",
+  "indices_zero_based": [
+    8,
+    10,
+    11,
+    12,
+    14,
+    16,
+    17,
+    18,
+    21,
+    22,
+    24,
+    25,
+    26,
+    29,
+    30,
+    31,
+    35,
+    37,
+    38,
+    40,
+    41,
+    42,
+    45,
+    46,
+    49,
+    50,
+    51,
+    52,
+    54,
+    57
+  ],
+  "policy": "Manifest order; exclude pilot identities; require matching Golden, nonempty body of at most 3000 characters, and one PR per repository. Long/empty bodies and repeated repositories are selection preferences, not validity failures. Public PR URL must resolve to HTTP 200; replace unavailable candidates with the next eligible source entries. Require a successful actual checkout and diff on this Windows host; replace candidates with incompatible filenames.",
+  "excluded_unverified": [
+    {
+      "manifest_index": 28,
+      "nwo": "Nixbug/entebus-android-operator",
+      "pr_number": 67,
+      "source_url": "https://github.com/Nixbug/entebus-android-operator/pull/67",
+      "verified": false,
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "manifest_index": 36,
+      "nwo": "RobertAgterhuis/myAgentic-IT-Project-team-V2",
+      "pr_number": 331,
+      "source_url": "https://github.com/RobertAgterhuis/myAgentic-IT-Project-team-V2/pull/331",
+      "verified": false,
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "manifest_index": 55,
+      "nwo": "anokye-labs/kbexplorer",
+      "pr_number": 38,
+      "source_url": "https://github.com/anokye-labs/kbexplorer/pull/38",
+      "checked_at_utc": "2026-11-16T05:29:46.430941+00:00",
+      "verified": false,
+      "http_status": 200,
+      "resolved_url": "https://github.com/anokye-labs/kbexplorer/issues/38",
+      "transport": "Windows curl with certificate verification",
+      "python_tls_error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get issuer certificate (_ssl.c:1000)>",
+      "error": "HTTP 200 resolves to /issues/38 instead of /pull/38; public PR not verified"
+    }
+  ],
+  "excluded_checkout": [
+    {
+      "manifest_index": 39,
+      "nwo": "SpanPanel/span",
+      "pr_number": 207,
+      "source_url": "https://github.com/SpanPanel/span/pull/207",
+      "error": "Windows git checkout: invalid path '.github/instructions/*.instructions.md'",
+      "evidence": "corpus/vi/expansion_60_evidence/dry_run_attempt_1.log"
+    }
+  ]
+}

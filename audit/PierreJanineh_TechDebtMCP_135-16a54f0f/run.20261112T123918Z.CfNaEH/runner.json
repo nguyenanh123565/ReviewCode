@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "run_id": "run.20261112T123918Z.CfNaEH",
+  "started_at": "2026-11-12T12:39:18Z",
+  "finished_at": "2026-11-12T12:39:20Z",
+  "task": {
+    "nwo": "PierreJanineh/TechDebtMCP",
+    "pr_number": 135,
+    "base": "ea0385c7349bbaee04456c57bf0ec3f217d63532",
+    "head": "16a54f0f85a9091f220418850eac6b4122782be5"
+  },
+  "result": "failed",
+  "audit_archive": "partial",
+  "container_exit_code": 1,
+  "artifacts": [
+    "metadata.json"
+  ]
+}

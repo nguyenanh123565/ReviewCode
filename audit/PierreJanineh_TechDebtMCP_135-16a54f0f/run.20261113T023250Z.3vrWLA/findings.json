@@ -1,0 +1,25 @@
+{
+  "pr": {
+    "repo": "https://github.com/PierreJanineh/TechDebtMCP",
+    "pr_number": 135,
+    "base": "ea0385c7349bbaee04456c57bf0ec3f217d63532",
+    "head": "16a54f0f85a9091f220418850eac6b4122782be5"
+  },
+  "agent": "try-agent",
+  "findings": [
+    {
+      "file": "src/server/__tests__/handlers.test.ts",
+      "start_line": 48,
+      "end_line": 50,
+      "message": "Điều kiện bắt handler luôn đúng gây bắt sai handler trong mock `setRequestHandler`: Trong `beforeEach` mock của `mockServer.server.setRequestHandler`, điều kiện dùng `if (schema?.method === 'tools/call' || typeof handler === 'function')` ở các dòng 48–50 luôn trả về true vì `typeof handler === 'function'` đúng với mọi handler được đăng ký. Kết quả: `callToolHandler` có thể bị gán với handler đầu tiên bất kể `schema.method`, làm cho test trở nên flaky hoặc bắt nhầm handler (ví dụ bắt handler để đăng ký khác thay vì handler cho `tools/call`). Tác động: các test trong suite có thể kiểm tra sai handler, dẫn đến false positives/negatives hoặc làm hỏng kiểm thử file-size guard. Sửa: thay điều kiện bằng kiểm tra chặt chẽ hơn, ví dụ chỉ gán khi `schema?.method === 'tools/call'`.",
+      "producer": "try-agent"
+    },
+    {
+      "file": "src/core/__tests__/customRulesEngine.test.ts",
+      "start_line": 265,
+      "end_line": 267,
+      "message": "Sử dụng `engine` có thể nằm ngoài phạm vi — nguy cơ ReferenceError trong test mới: Trong test 'executes a pattern at exactly MAX_PATTERN_LENGTH without error' (dòng ~265–267) mã gọi `engine.addRule(...)` và `engine.executeRules(...)` nhưng trong diff không thấy khai báo `engine` trong phạm vi cục bộ của describe này. Nếu biến `engine` không được khai báo ở mức mô-đun hoặc outer `describe` (không có trong đoạn diff), test sẽ ném ReferenceError tại thời điểm chạy. Tác động: test mới có khả năng thất bại ngay khi chạy (không phải logic của engine), làm hỏng bộ test. Sửa: đảm bảo `engine` được khai báo/khởi tạo (ví dụ `const engine = new CustomRulesEngine();` hoặc dùng `beforeEach` để tạo) trong phạm vi chứa test.",
+      "producer": "try-agent"
+    }
+  ]
+}

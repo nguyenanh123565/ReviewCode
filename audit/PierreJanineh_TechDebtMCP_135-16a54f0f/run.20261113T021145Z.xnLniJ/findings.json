@@ -1,0 +1,25 @@
+{
+  "pr": {
+    "repo": "https://github.com/PierreJanineh/TechDebtMCP",
+    "pr_number": 135,
+    "base": "ea0385c7349bbaee04456c57bf0ec3f217d63532",
+    "head": "16a54f0f85a9091f220418850eac6b4122782be5"
+  },
+  "agent": "try-agent",
+  "findings": [
+    {
+      "file": "src/core/customRulesEngine.ts",
+      "start_line": 19,
+      "end_line": 49,
+      "message": "Flag allowlist rejects newer/valid RegExp flags (e.g. 'd'): The change introduces an allowlist `ALLOWED_FLAGS_RE = /^[gimsuy]*$/` and rejects any flags not in that set during `validatePattern()` (lines added near the top of `customRulesEngine.ts`). Modern JavaScript/Node runtimes support additional RegExp flags (for example the `d` indices flag introduced in newer ECMAScript versions). By hard‑rejecting anything outside `gimsuy`, the validation will incorrectly refuse otherwise valid user regexes that use supported flags (causing valid custom rules to be rejected).\n\nWhen it occurs: when a user calls `validatePattern()` (or `add_custom_rule`) supplying a flag such as `d` that is supported by the runtime but not included in the allowlist.\n\nImpact: users with existing/valid rules using such flags will see rule validation fail and be unable to add rules; this is a backward‑compatibility regression and may break legitimate workflows. The security intent is valid, but the implementation can cause false rejections.\n\nSuggested fix: either extend the allowlist to include runtime‑supported flags (e.g. add `'d'`), or perform feature detection (e.g., attempt to construct a `RegExp` with the supplied flags and catch errors) rather than relying on a hardcoded character class that may lag language changes.",
+      "producer": "try-agent"
+    },
+    {
+      "file": "src/server/__tests__/handlers.test.ts",
+      "start_line": 1,
+      "end_line": 54,
+      "message": "Test imports and jest.mock ordering can cause mock/real binding mismatch: The test file imports `fileExists` and `getFileStats` (and `MAX_FILE_SIZE_BYTES`) at the top, then calls `jest.mock('../../utils/fileUtils.js', ...)` later in the same file and casts the imported symbols to `jest.MockedFunction` (lines 1–54). If `jest.mock` is not hoisted (depending on test runner configuration / ESM behavior), the imported bindings may already be bound to the real implementations instead of the mock factories declared in `jest.mock(...)`. That leads to fragile tests or runtime errors when the code later treats those imports as mocked functions.\n\nWhen it occurs: while running the test suite under environments where `jest.mock` is not hoisted before imports (common in ESM contexts) or when the test runner doesn't apply hoisting for those calls.\n\nImpact: flakey tests or type/assertion failures in CI; tests may exercise real filesystem code unexpectedly.\n\nSuggested fix: move the `jest.mock('../../utils/fileUtils.js', ...)` call to the top of the module (before importing the functions that will be mocked), or avoid importing the functions directly and instead require/import them after mocking, or use `jest.unstable_mockModule` / top-level hoisted mocks appropriate for the environment so the imported bindings point at mocks reliably.",
+      "producer": "try-agent"
+    }
+  ]
+}

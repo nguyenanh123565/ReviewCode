@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "run_id": "run.20261113T023501Z.BcQSE3",
+  "started_at": "2026-11-13T02:35:01.817Z",
+  "updated_at": "2026-11-13T02:36:35.580Z",
+  "finished_at": "2026-11-13T02:36:35.579Z",
+  "pr": {
+    "repo": "https://github.com/PierreJanineh/TechDebtMCP",
+    "nwo": "PierreJanineh/TechDebtMCP",
+    "pr_number": 135,
+    "base": "ea0385c7349bbaee04456c57bf0ec3f217d63532",
+    "head": "16a54f0f85a9091f220418850eac6b4122782be5"
+  },
+  "diff": {
+    "sha256": "45e636614bf6ae452b8f09c134fdd5dc2e5b5ce6830923c5d46af82fd011c73b",
+    "size_bytes": 22824
+  },
+  "prompt": {
+    "sha256": "6b064d568709cebe4846c9cdd0d2137835ac1d1fb979729a32f2511bfe9816be",
+    "size_bytes": 3696
+  },
+  "codex": {
+    "version": "0.167.0",
+    "model": "gpt-5-mini",
+    "reasoning_effort": "medium"
+  },
+  "review_language": "vi",
+  "status": "completed",
+  "raw_response": {
+    "file": "codex-response.json",
+    "sha256": "100ca6e8ebaed4df9cf049e4f4fc3fd5adb2046096483a9597dfa4e86234484a",
+    "size_bytes": 2954
+  },
+  "raw_response_status": "saved",
+  "parser": {
+    "status": "passed",
+    "error": null
+  },
+  "findings": {
+    "file": "findings.json",
+    "count": 2,
+    "sha256": "51811776988b676015af4af0119011d46e4ce2a23e913ac99a77c035ff5e89e5",
+    "size_bytes": 3159
+  },
+  "error": null
+}

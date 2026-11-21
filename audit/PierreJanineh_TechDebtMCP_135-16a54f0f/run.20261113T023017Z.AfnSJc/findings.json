@@ -1,0 +1,25 @@
+{
+  "pr": {
+    "repo": "https://github.com/PierreJanineh/TechDebtMCP",
+    "pr_number": 135,
+    "base": "ea0385c7349bbaee04456c57bf0ec3f217d63532",
+    "head": "16a54f0f85a9091f220418850eac6b4122782be5"
+  },
+  "agent": "try-agent",
+  "findings": [
+    {
+      "file": "src/core/customRulesEngine.ts",
+      "start_line": 19,
+      "end_line": 44,
+      "message": "Calling ALLOWED_FLAGS_RE.test() without ensuring flags is a string can throw TypeError: The new validation logic runs `ALLOWED_FLAGS_RE.test(pattern.flags)` when `pattern.flags` is present (see the added allowlist check). If `pattern.flags` is not a string at runtime (e.g. a Symbol or an object whose toString throws), calling `.test()` can raise a TypeError and cause `validatePattern()` to throw instead of returning a structured validation result. Previously the code compiled the RegExp inside a try/catch and surfaced errors via the `errors` array; the new pre-check may cause unexpected exceptions to bubble up and crash callers that expect `validatePattern()` to return a `valid: false` result. \n\nWhen it occurs: when `validatePattern()` is called with a `pattern.flags` value that is not a plain string (for example a Symbol). \n\nImpact: this can cause the validator to throw at runtime instead of failing gracefully, breaking callers and test harnesses and making the validator less robust against malformed input. \n\nSuggested fix: guard the allowlist test with a string check (for example `if (pattern.flags !== undefined && typeof pattern.flags === 'string' && !ALLOWED_FLAGS_RE.test(pattern.flags)) { ... }`) or coerce safely (`String(pattern.flags)`) before validation and handle coercion errors inside the function so `validatePattern()` always returns a validation object rather than throwing.",
+      "producer": "try-agent"
+    },
+    {
+      "file": "src/core/customRulesEngine.ts",
+      "start_line": 211,
+      "end_line": 260,
+      "message": "Error message echoes user-supplied `pattern.flags` verbatim; can expose or amplify large inputs: The new invalid-flags error message embeds the user-supplied `pattern.flags` directly in the string: `Invalid regex flags: \"${pattern.flags}\"...`. If an attacker supplies a very large `flags` value (or otherwise sensitive content), that content will be copied into the error message and may be logged, returned to callers, or held in memory. This increases the chance of memory pressure or inadvertent data leakage and makes the validator easier to abuse (for example by sending excessively long flags strings to bloat logs or error payloads).\n\nWhen it occurs: when `validatePattern()` detects invalid flags and appends the error message containing `pattern.flags`. \n\nImpact: may enable log/file-size amplification or leak user-supplied content in error responses. It's a regression relative to not echoing large inputs.\n\nSuggested fix: avoid echoing the full `pattern.flags` in error messages. Truncate the echoed value (e.g., include only the first N characters), or simply report the invalid flags without embedding the raw input (e.g., `Invalid regex flags; allowed characters are g, i, m, s, u, y`).",
+      "producer": "try-agent"
+    }
+  ]
+}

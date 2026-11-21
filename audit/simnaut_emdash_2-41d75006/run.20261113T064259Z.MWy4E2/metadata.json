@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "run_id": "run.20261113T064259Z.MWy4E2",
+  "started_at": "2026-11-13T06:43:02.990Z",
+  "updated_at": "2026-11-13T06:43:07.251Z",
+  "finished_at": "2026-11-13T06:43:07.251Z",
+  "pr": {
+    "repo": "https://github.com/simnaut/emdash",
+    "nwo": "simnaut/emdash",
+    "pr_number": 2,
+    "base": "5beb0ddc334deb862ba90cedbf03f052b58e4974",
+    "head": "41d750067fc7a39eb29f6a530cf0d4ae0f8bdb41"
+  },
+  "diff": {
+    "sha256": "cf5d991ce3cdd86e20499f59aa2f3dbb67fc01a686145ec9b5bcb3523107430a",
+    "size_bytes": 852286
+  },
+  "prompt": {
+    "sha256": "66cbb54b0ca754932fecc88a61336c45bff450a534f6dcfee4a762c6faac27ff",
+    "size_bytes": 12412
+  },
+  "codex": {
+    "version": "0.167.0",
+    "model": "gpt-5-mini",
+    "reasoning_effort": "medium"
+  },
+  "review_language": "vi",
+  "status": "codex_failed",
+  "raw_response": null,
+  "raw_response_status": "not_available",
+  "parser": {
+    "status": "not_started",
+    "error": null
+  },
+  "findings": null,
+  "error": "Codex exec failed with exit code 1: /utils/site-identity.ts new file mode 100644 index 0000000..5d657ab --- /dev/null +++ b/templates/starter/src/utils/site-identity.ts @@ -0,0 +1,14 @@ +export interface StarterSiteIdentitySettings { + title?: string; + tagline?: string; +} + +const DEFAULT_SITE_TITLE = \"My Site\"; +const DEFAULT_SITE_TAGLINE = \"Built with EmDash\"; + +export function resolveStarterSiteIdentity(settings?: StarterSiteIdentitySettings) { + return { + siteTitle: settings?.title ?? DEFAULT_SITE_TITLE, + siteTagline: settings?.tagline ?? DEFAULT_SITE_TAGLINE, + }; +} </stdin> warning: Codex could not find bubblewrap on PATH. Install bubblewrap with your OS package manager. See the sandbox prerequisites: https://developers.openai.com/codex/concepts/sandboxing#prerequisites. Codex will use the bundled bubblewrap in the meantime. warning: Model metadata for `gpt-5-mini` not found. Defaulting to fallback metadata; this can degrade performance and cause issues. ERROR: Codex ran out of room in the model's context window. Start a new thread or clear earlier history before retrying. ERROR: Codex ran out of room in the model's context window. Start a new thread or clear earlier history before retrying. tokens used 0"
+}

@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://review-bench.ai/schema/corpus-manifest.schema.json",
+  "title": "ReviewBench pull request corpus manifest",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "repo",
+      "pr_number",
+      "pr_url",
+      "base",
+      "head",
+      "title",
+      "body",
+      "nwo",
+      "language",
+      "repo_size_kb",
+      "lines_added",
+      "lines_removed",
+      "files_changed"
+    ],
+    "properties": {
+      "repo": { "type": "string" },
+      "pr_number": { "type": "integer", "minimum": 1 },
+      "pr_url": { "type": "string" },
+      "base": { "type": "string", "pattern": "^[0-9a-f]{40}$" },
+      "head": { "type": "string", "pattern": "^[0-9a-f]{40}$" },
+      "title": { "type": "string" },
+      "body": { "type": "string" },
+      "nwo": { "type": "string" },
+      "language": { "type": "string" },
+      "repo_size_kb": { "type": "integer", "minimum": 0 },
+      "lines_added": { "type": "integer", "minimum": 0 },
+      "lines_removed": { "type": "integer", "minimum": 0 },
+      "files_changed": { "type": "integer", "minimum": 0 },
+      "translation": {
+        "type": "object",
+        "required": ["language", "source_manifest", "source_title", "source_body", "notes"],
+        "properties": {
+          "language": { "type": "string", "enum": ["vi"] },
+          "source_manifest": { "type": "string" },
+          "source_title": { "type": "string" },
+          "source_body": { "type": "string" },
+          "notes": { "type": "string" }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

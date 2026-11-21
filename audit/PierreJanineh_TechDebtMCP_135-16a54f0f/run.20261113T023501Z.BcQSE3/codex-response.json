@@ -1,0 +1,20 @@
+{
+  "findings": [
+    {
+      "priority": "P2",
+      "file": "src/server/__tests__/handlers.test.ts",
+      "start_line": 1,
+      "end_line": 54,
+      "title": "Mock for `setRequestHandler` captures the wrong handler because `typeof handler === 'function'` is always true",
+      "explanation": "Trong `beforeEach` của test, mock `setRequestHandler` gán `callToolHandler` khi `schema?.method === 'tools/call' || typeof handler === 'function'`. Vì `handler` luôn là một function khi `setRequestHandler` được gọi, điều kiện `typeof handler === 'function'` luôn đúng và sẽ gán `callToolHandler` cho handler của bất kỳ đăng ký nào (không chỉ handler cho `tools/call`).\n\nĐiều kiện này có thể khiến test dùng một handler không liên quan (flaky) hoặc không kiểm tra đúng handler mong muốn, dẫn tới thất bại test khó chẩn đoán hoặc che dấu lỗi trong `attachHandlers()`.\n\nSửa chữa: thay đổi điều kiện để chỉ gán khi `schema?.method === 'tools/call'` (hoặc kiểm tra rõ ràng theo thứ tự gọi/shape của schema). Ví dụ: loại bỏ `|| typeof handler === 'function'` hoặc thay bằng kiểm tra schema chính xác, rồi trong test lấy handler từ `mock.calls` nếu cần chắc chắn handler chính xác đã được đăng ký."
+    },
+    {
+      "priority": "P3",
+      "file": "src/core/customRulesEngine.ts",
+      "start_line": 19,
+      "end_line": 49,
+      "title": "Allowlist cờ regex (`ALLOWED_FLAGS_RE`) không bao gồm cờ `d` (indices) — có thể từ chối cờ RegExp hợp lệ trong runtime mới hơn",
+      "explanation": "Tệp thêm `ALLOWED_FLAGS_RE = /^[gimsuy]*$/` để chỉ cho phép các ký tự cờ `g, i, m, s, u, y`. Tuy nhiên, tiêu chuẩn ECMAScript/RegExp đã giới thiệu cờ `d` (indices) trong ES2022. Nếu runtime (Node / V8) hỗ trợ cờ `d`, thì biểu thức allowlist hiện tại sẽ đánh dấu một chuỗi cờ hợp lệ '...d...' là không hợp lệ trong `validatePattern()`, khiến việc thêm/validate pattern hợp lệ bị từ chối.\n\nTác động: người dùng hợp lệ muốn dùng cờ `d` sẽ thấy `validatePattern()` trả lỗi, hoặc nếu bypass validation thì `executePattern()` sẽ strip/loại bỏ ký tự `d` và hành vi không khớp như mong đợi.\n\nSửa chữa: nếu mục tiêu là cho phép mọi cờ RegExp hiện đại được hỗ trợ bởi runtime, hãy bổ sung `d` vào allowlist (`/^[gimsuyd]*$/`) hoặc thay đổi logic để kiểm tra cờ hợp lệ bằng cách cố gắng biên dịch `RegExp` với các cờ đã cho (và bắt lỗi), thay vì hardcode một tập ký tự không cập nhật. Nếu quyết định là cố tình chặn `d`, hãy thêm comment giải thích rõ lý do (và cân nhắc cập nhật README/CHANGELOG để phản ánh ràng buộc này)."
+    }
+  ]
+}

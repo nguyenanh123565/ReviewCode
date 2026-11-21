@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Codex ReviewBench structured review response",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["findings"],
+  "properties": {
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["priority", "file", "start_line", "end_line", "title", "explanation"],
+        "properties": {
+          "priority": { "type": "string", "enum": ["P1", "P2", "P3"] },
+          "file": { "type": "string", "minLength": 1 },
+          "start_line": { "type": "integer", "minimum": 1 },
+          "end_line": { "type": "integer", "minimum": 1 },
+          "title": { "type": "string", "minLength": 1 },
+          "explanation": { "type": "string", "minLength": 1 }
+        }
+      }
+    }
+  }
+}

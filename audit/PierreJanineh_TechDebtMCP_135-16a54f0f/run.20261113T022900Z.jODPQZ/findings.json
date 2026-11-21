@@ -1,0 +1,10 @@
+{
+  "pr": {
+    "repo": "https://github.com/PierreJanineh/TechDebtMCP",
+    "pr_number": 135,
+    "base": "ea0385c7349bbaee04456c57bf0ec3f217d63532",
+    "head": "16a54f0f85a9091f220418850eac6b4122782be5"
+  },
+  "agent": "try-agent",
+  "findings": []
+}

@@ -1,0 +1,311 @@
+{
+  "checked_at_utc": "2026-11-16T05:29:48.064635+00:00",
+  "method": "Unauthenticated HTTPS HEAD; no API key or authorization header",
+  "passed": 29,
+  "tasks": [
+    {
+      "manifest_index": 8,
+      "nwo": "ComposioHQ/agent-orchestrator",
+      "pr_number": 1277,
+      "source_url": "https://github.com/ComposioHQ/agent-orchestrator/pull/1277",
+      "http_status": 200,
+      "resolved_url": "https://github.com/OrchestratorInc/agent-orchestrator/pull/1277",
+      "verified": true,
+      "checked_at_utc": "2026-11-16T05:22:55.253011+00:00"
+    },
+    {
+      "manifest_index": 10,
+      "nwo": "EdV4H/usketch",
+      "pr_number": 534,
+      "source_url": "https://github.com/EdV4H/usketch/pull/534",
+      "http_status": 200,
+      "resolved_url": "https://github.com/EdV4H/usketch/pull/534",
+      "verified": true,
+      "checked_at_utc": "2026-11-16T05:22:55.253011+00:00"
+    },
+    {
+      "manifest_index": 11,
+      "nwo": "EtienneLescot/n8n-as-code",
+      "pr_number": 295,
+      "source_url": "https://github.com/EtienneLescot/n8n-as-code/pull/295",
+      "http_status": 200,
+      "resolved_url": "https://github.com/EtienneLescot/n8n-as-code/pull/295",
+      "verified": true,
+      "checked_at_utc": "2026-11-16T05:22:55.253011+00:00"
+    },
+    {
+      "manifest_index": 12,
+      "nwo": "FreeRTOS/FreeRTOS-Kernel",
+      "pr_number": 1379,
+      "source_url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/pull/1379",
+      "http_status": 200,
+      "resolved_url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/pull/1379",
+      "verified": true,
+      "checked_at_utc": "2026-11-16T05:22:55.253011+00:00"
+    },
+    {
+      "manifest_index": 14,
+      "nwo": "Hermione-Granger-1176/artifacts",
+      "pr_number": 24,
+      "source_url": "https://github.com/Hermione-Granger-1176/artifacts/pull/24",
+      "http_status": 200,
+      "resolved_url": "https://github.com/Hermione-Granger-1176/artifacts/pull/24",
+      "verified": true,
+      "checked_at_utc": "2026-11-16T05:22:55.253011+00:00"
+    },
+    {
+      "manifest_index": 16,
+      "nwo": "JacobPEvans/ansible-splunk",
+      "pr_number": 120,
+      "source_url": "https://github.com/JacobPEvans/ansible-splunk/pull/120",
+      "http_status": 200,
+      "resolved_url": "https://github.com/dryvist/ansible-splunk/pull/120",
+      "verified": true,
+      "checked_at_utc": "2026-11-16T05:22:55.253011+00:00"
+    },
+    {
+      "manifest_index": 17,
+      "nwo": "LegionIO/legion-interlink",
+      "pr_number": 16,
+      "source_url": "https://github.com/LegionIO/legion-interlink/pull/16",
+      "http_status": 200,
+      "resolved_url": "https://github.com/LegionIO/legion-interlink/pull/16",
+      "verified": true,
+      "checked_at_utc": "2026-11-16T05:22:55.253011+00:00"
+    },
+    {
+      "manifest_index": 18,
+      "nwo": "LittleAndi/FileHorizon",
+      "pr_number": 19,
+      "source_url": "https://github.com/LittleAndi/FileHorizon/pull/19",
+      "http_status": 200,
+      "resolved_url": "https://github.com/LittleAndi/FileHorizon/pull/19",
+      "verified": true,
+      "checked_at_utc": "2026-11-16T05:22:55.253011+00:00"
+    },
+    {
+      "manifest_index": 21,
+      "nwo": "MatthewPeterKelly/fractal-renderer",
+      "pr_number": 163,
+      "source_url": "https://github.com/MatthewPeterKelly/fractal-renderer/pull/163",
+      "http_status": 200,
+      "resolved_url": "https://github.com/MatthewPeterKelly/fractal-renderer/pull/163",
+      "verified": true,
+      "checked_at_utc": "2026-11-16T05:22:55.253011+00:00"
+    },
+    {
+      "manifest_index": 22,
+      "nwo": "Mirkiux/featkit",
+      "pr_number": 17,
+      "source_url": "https://github.com/Mirkiux/featkit/pull/17",
+      "http_status": 200,
+      "resolved_url": "https://github.com/Mirkiux/featkit/pull/17",
+      "verified": true,
+      "checked_at_utc": "2026-11-16T05:22:55.253011+00:00"
+    },
+    {
+      "manifest_index": 24,
+      "nwo": "NKUST-ITC/NKUST-AP-Flutter",
+      "pr_number": 349,
+      "source_url": "https://github.com/NKUST-ITC/NKUST-AP-Flutter/pull/349",
+      "http_status": 200,
+      "resolved_url": "https://github.com/NKUST-ITC/NKUST-AP-Flutter/pull/349",
+      "verified": true,
+      "checked_at_utc": "2026-11-16T05:22:55.253011+00:00"
+    },
+    {
+      "manifest_index": 25,
+      "nwo": "NestDevLab/nestjs-yalc",
+      "pr_number": 123,
+      "source_url": "https://github.com/NestDevLab/nestjs-yalc/pull/123",
+      "http_status": 200,
+      "resolved_url": "https://github.com/NestDevLab/nestjs-yalc/pull/123",
+      "verified": true,
+      "checked_at_utc": "2026-11-16T05:22:55.253011+00:00"
+    },
+    {
+      "manifest_index": 26,
+      "nwo": "NightHawkATL/ntp-dashboard",
+      "pr_number": 84,
+      "source_url": "https://github.com/NightHawkATL/ntp-dashboard/pull/84",
+      "http_status": 200,
+      "resolved_url": "https://github.com/NightHawkATL/ntp-dashboard/pull/84",
+      "verified": true,
+      "checked_at_utc": "2026-11-16T05:22:55.253011+00:00"
+    },
+    {
+      "manifest_index": 29,
+      "nwo": "Nixbug/entebus-web-executive",
+      "pr_number": 120,
+      "source_url": "https://github.com/Nixbug/entebus-web-executive/pull/120",
+      "http_status": 200,
+      "resolved_url": "https://github.com/Nixbug/entebus-web-executive/pull/120",
+      "verified": true,
+      "checked_at_utc": "2026-11-16T05:22:55.253011+00:00"
+    },
+    {
+      "manifest_index": 30,
+      "nwo": "OpenDevicePartnership/embedded-services",
+      "pr_number": 793,
+      "source_url": "https://github.com/OpenDevicePartnership/embedded-services/pull/793",
+      "http_status": 200,
+      "resolved_url": "https://github.com/OpenDevicePartnership/embedded-services/pull/793",
+      "verified": true,
+      "checked_at_utc": "2026-11-16T05:22:55.253011+00:00"
+    },
+    {
+      "manifest_index": 31,
+      "nwo": "PaulStSmith/PostmanOpenAPIConverter",
+      "pr_number": 7,
+      "source_url": "https://github.com/PaulStSmith/PostmanOpenAPIConverter/pull/7",
+      "http_status": 200,
+      "resolved_url": "https://github.com/ByteForgeBiz/p2oa/pull/7",
+      "verified": true,
+      "checked_at_utc": "2026-11-16T05:22:55.253011+00:00"
+    },
+    {
+      "manifest_index": 35,
+      "nwo": "ROCm/TransferBench",
+      "pr_number": 256,
+      "source_url": "https://github.com/ROCm/TransferBench/pull/256",
+      "http_status": 200,
+      "resolved_url": "https://github.com/ROCm/TransferBench/pull/256",
+      "verified": true,
+      "checked_at_utc": "2026-11-16T05:22:55.253011+00:00"
+    },
+    {
+      "manifest_index": 37,
+      "nwo": "Serapieum-of-alex/statista",
+      "pr_number": 130,
+      "source_url": "https://github.com/Serapieum-of-alex/statista/pull/130",
+      "http_status": 200,
+      "resolved_url": "https://github.com/serapeum-org/statista/pull/130",
+      "verified": true,
+      "checked_at_utc": "2026-11-16T05:22:55.253011+00:00"
+    },
+    {
+      "manifest_index": 38,
+      "nwo": "SiaFoundation/indexd",
+      "pr_number": 939,
+      "source_url": "https://github.com/SiaFoundation/indexd/pull/939",
+      "http_status": 200,
+      "resolved_url": "https://github.com/SiaFoundation/indexd/pull/939",
+      "verified": true,
+      "checked_at_utc": "2026-11-16T05:22:55.253011+00:00"
+    },
+    {
+      "manifest_index": 40,
+      "nwo": "T-K-233/Actuator-Control",
+      "pr_number": 7,
+      "source_url": "https://github.com/T-K-233/Actuator-Control/pull/7",
+      "http_status": 200,
+      "resolved_url": "https://github.com/berkeley-humanoids/actuator-control/pull/7",
+      "verified": true,
+      "checked_at_utc": "2026-11-16T05:22:55.253011+00:00"
+    },
+    {
+      "manifest_index": 41,
+      "nwo": "TrossenRobotics/trumi",
+      "pr_number": 7,
+      "source_url": "https://github.com/TrossenRobotics/trumi/pull/7",
+      "http_status": 200,
+      "resolved_url": "https://github.com/TrossenRobotics/trumi/pull/7",
+      "verified": true,
+      "checked_at_utc": "2026-11-16T05:22:55.253011+00:00"
+    },
+    {
+      "manifest_index": 42,
+      "nwo": "Tzeusy/butlers",
+      "pr_number": 1021,
+      "source_url": "https://github.com/Tzeusy/butlers/pull/1021",
+      "http_status": 200,
+      "resolved_url": "https://github.com/tzeusy-org/butlers/pull/1021",
+      "verified": true,
+      "checked_at_utc": "2026-11-16T05:22:55.253011+00:00"
+    },
+    {
+      "manifest_index": 45,
+      "nwo": "UniverseCitiz3n/msgraph-kb-mcp",
+      "pr_number": 2,
+      "source_url": "https://github.com/UniverseCitiz3n/msgraph-kb-mcp/pull/2",
+      "http_status": 200,
+      "resolved_url": "https://github.com/UniverseCitiz3n/msgraph-kb-mcp/pull/2",
+      "verified": true,
+      "checked_at_utc": "2026-11-16T05:22:55.253011+00:00"
+    },
+    {
+      "manifest_index": 46,
+      "nwo": "VeyronSakai/UniCortex",
+      "pr_number": 162,
+      "source_url": "https://github.com/VeyronSakai/UniCortex/pull/162",
+      "http_status": 200,
+      "resolved_url": "https://github.com/VeyronSakai/UniCortex/pull/162",
+      "verified": true,
+      "checked_at_utc": "2026-11-16T05:22:55.253011+00:00"
+    },
+    {
+      "manifest_index": 49,
+      "nwo": "YasserShkeir/django-smart-ratelimit",
+      "pr_number": 25,
+      "source_url": "https://github.com/YasserShkeir/django-smart-ratelimit/pull/25",
+      "http_status": 200,
+      "resolved_url": "https://github.com/YasserShkeir/django-smart-ratelimit/pull/25",
+      "verified": true,
+      "checked_at_utc": "2026-11-16T05:22:55.253011+00:00"
+    },
+    {
+      "manifest_index": 50,
+      "nwo": "ZhuoZhuoCrayon/throttled-py",
+      "pr_number": 135,
+      "source_url": "https://github.com/ZhuoZhuoCrayon/throttled-py/pull/135",
+      "http_status": 200,
+      "resolved_url": "https://github.com/ZhuoZhuoCrayon/throttled-py/pull/135",
+      "verified": true,
+      "checked_at_utc": "2026-11-16T05:22:55.253011+00:00"
+    },
+    {
+      "manifest_index": 51,
+      "nwo": "agent-sh/agentsys",
+      "pr_number": 298,
+      "source_url": "https://github.com/agent-sh/agentsys/pull/298",
+      "http_status": 200,
+      "resolved_url": "https://github.com/agent-sh/agentsys/pull/298",
+      "verified": true,
+      "checked_at_utc": "2026-11-16T05:22:55.253011+00:00"
+    },
+    {
+      "manifest_index": 52,
+      "nwo": "alexbol99/flatten-js",
+      "pr_number": 244,
+      "source_url": "https://github.com/alexbol99/flatten-js/pull/244",
+      "checked_at_utc": "2026-11-16T05:25:38.136750+00:00",
+      "http_status": 200,
+      "resolved_url": "https://github.com/alexbol99/flatten-js/pull/244",
+      "verified": true
+    },
+    {
+      "manifest_index": 54,
+      "nwo": "andresharpe/dotbot",
+      "pr_number": 131,
+      "source_url": "https://github.com/andresharpe/dotbot/pull/131",
+      "checked_at_utc": "2026-11-16T05:25:38.137753+00:00",
+      "http_status": 200,
+      "resolved_url": "https://github.com/andresharpe/dotbot/pull/131",
+      "verified": true
+    },
+    {
+      "manifest_index": 55,
+      "nwo": "anokye-labs/kbexplorer",
+      "pr_number": 38,
+      "source_url": "https://github.com/anokye-labs/kbexplorer/pull/38",
+      "checked_at_utc": "2026-11-16T05:29:46.430941+00:00",
+      "verified": false,
+      "http_status": 200,
+      "resolved_url": "https://github.com/anokye-labs/kbexplorer/issues/38",
+      "transport": "Windows curl with certificate verification",
+      "python_tls_error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get issuer certificate (_ssl.c:1000)>",
+      "error": "HTTP 200 resolves to /issues/38 instead of /pull/38; public PR not verified"
+    }
+  ],
+  "classification_note": "PR verification requires both HTTP 200 and a resolved /pull/{expected number} route. Raw observed status and URL are preserved."
+}

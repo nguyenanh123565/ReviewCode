@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "run_id": "run.20261112T123918Z.CfNaEH",
+  "started_at": "2026-11-12T12:39:19.728Z",
+  "updated_at": "2026-11-12T12:39:20.125Z",
+  "finished_at": "2026-11-12T12:39:20.124Z",
+  "pr": {
+    "repo": "https://github.com/PierreJanineh/TechDebtMCP",
+    "nwo": "PierreJanineh/TechDebtMCP",
+    "pr_number": 135,
+    "base": "ea0385c7349bbaee04456c57bf0ec3f217d63532",
+    "head": "16a54f0f85a9091f220418850eac6b4122782be5"
+  },
+  "diff": {
+    "sha256": "45e636614bf6ae452b8f09c134fdd5dc2e5b5ce6830923c5d46af82fd011c73b",
+    "size_bytes": 22824
+  },
+  "prompt": {
+    "sha256": "6b064d568709cebe4846c9cdd0d2137835ac1d1fb979729a32f2511bfe9816be",
+    "size_bytes": 3696
+  },
+  "codex": {
+    "version": null,
+    "model": "gpt-5-mini",
+    "reasoning_effort": "medium"
+  },
+  "review_language": "vi",
+  "status": "preflight_failed",
+  "raw_response": null,
+  "raw_response_status": "not_available",
+  "parser": {
+    "status": "not_started",
+    "error": null
+  },
+  "findings": null,
+  "error": "Codex CLI preflight: codex exec --help is missing stdin is piped and a prompt is also provided, stdin is appended as a <stdin> block"
+}

@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "run_id": "run.20261113T100026Z.nc2ip1",
+  "started_at": "2026-11-13T10:00:26Z",
+  "finished_at": "2026-11-13T10:00:27Z",
+  "task": {
+    "nwo": "DisciplinedSoftware/Codebase-Conversion",
+    "pr_number": 1,
+    "base": "ed10728c91f7858a0bd95a97c754f4bd6c0487ec",
+    "head": "4b46d68c215dd2448a62f751e81218a0da789165"
+  },
+  "result": "failed",
+  "audit_archive": "none",
+  "container_exit_code": 2,
+  "artifacts": []
+}

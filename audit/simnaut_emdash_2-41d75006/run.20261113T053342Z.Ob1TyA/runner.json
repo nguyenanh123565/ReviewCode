@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "run_id": "run.20261113T053342Z.Ob1TyA",
+  "started_at": "2026-11-13T05:33:42Z",
+  "finished_at": "2026-11-13T05:33:50Z",
+  "task": {
+    "nwo": "simnaut/emdash",
+    "pr_number": 2,
+    "base": "5beb0ddc334deb862ba90cedbf03f052b58e4974",
+    "head": "41d750067fc7a39eb29f6a530cf0d4ae0f8bdb41"
+  },
+  "result": "failed",
+  "audit_archive": "partial",
+  "container_exit_code": 1,
+  "artifacts": [
+    "metadata.json"
+  ]
+}

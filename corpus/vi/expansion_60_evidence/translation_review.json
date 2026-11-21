@@ -1,0 +1,349 @@
+[
+  {
+    "nwo": "ComposioHQ/agent-orchestrator",
+    "pr_number": 1277,
+    "result": "pass",
+    "translated_sha256": "597d6f65af9a4eea36f8350b18ce62002d2c5f3ded9db22c46c292ea79ba4194",
+    "notes": [
+      "Tiêu đề giữ đúng lỗi thiếu script của repo khi cài đặt toàn cục và liên hệ #1252.",
+      "Body chỉ dịch từ mô tả khắc phục issue; thẻ img, kích thước 1116 × 720 và URL được giữ nguyên.",
+      "Không thêm điều kiện, cách triển khai hoặc kết quả kiểm thử ngoài PR nguồn."
+    ]
+  },
+  {
+    "nwo": "EdV4H/usketch",
+    "pr_number": 534,
+    "result": "pass",
+    "translated_sha256": "014e40fedf258ae522d946f5966bf80bc64c835a8d9117b982b6546063b66a01",
+    "notes": [
+      "Đã đối chiếu bản Nhật: bảy hàm tiện ích xoay trong @edv4h/usketch-shared, CSS transform: rotate() tại ShapeWrapper và DOM đều được giữ đúng.",
+      "Giữ đủ năm plugin basic, image, text, wireframe, sticky; hitTest được bọc bằng withRotation(); board-store/shapeToBounds tính AABB mở rộng có xét phép xoay.",
+      "Giữ mô tả 22 bài kiểm thử rotation.test.ts, 122 tác vụ typecheck, lệnh pnpm test và ba trạng thái đã đánh dấu; kiểm thử thủ công hiển thị/nhấp/cuộn vẫn chưa đánh dấu.",
+      "Không thêm yêu cầu triển khai giao diện xoay hoặc công cụ tương tác ngoài nền tảng được mô tả."
+    ]
+  },
+  {
+    "nwo": "EtienneLescot/n8n-as-code",
+    "pr_number": 295,
+    "result": "pass",
+    "translated_sha256": "b475a6889b6baa96223503be92ddb23e2a2ce1fcf05f7f8a70d690bff34dc816",
+    "notes": [
+      "Giữ công thức workflowDir = <syncFolder>/<instanceIdentifier>/<projectSlug>, trường ILocalConfig và việc tự động lưu qua instance add / instance select / init.",
+      "Giữ thay đổi của resolvePushTarget: bỏ tiền tố ngầm cho basename, phân giải từ cwd và ví dụ my-workflow.workflow.ts thất bại ngay theo mô tả nguồn.",
+      "Giữ đủ ba thông tin trong lỗi ngoài phạm vi: thư mục phạm vi đang hoạt động, đường dẫn sửa đúng, lệnh n8nac push chính xác; gợi ý workflowDir trong n8nac-config.json còn nguyên.",
+      "Giữ yêu cầu đường dẫn tương đối đầy đủ, việc bỏ chỉ dẫn mâu thuẫn và nguồn dữ liệu chuẩn ổn định qua instance select / --instance; không đổi thành yêu cầu đường dẫn tuyệt đối."
+    ]
+  },
+  {
+    "nwo": "FreeRTOS/FreeRTOS-Kernel",
+    "pr_number": 1379,
+    "result": "pass",
+    "translated_sha256": "08657bd0954e06c85e742407ab34350f36b5b79aab37d4cab2ece998f7d63952",
+    "notes": [
+      "Giữ chuỗi nguyên nhân: xTaskIncrementTick() đặt cờ vô điều kiện, ISR đọc cờ pdTRUE cũ, pxHigherPriorityTaskWoken bị đặt sai rồi gọi portYIELD_FROM_ISR()/vTaskSwitchContext()/prvSelectHighestPriorityTask().",
+      "Giữ đủ ba lớp sửa: bảo vệ phép gán ban đầu; kiểm tra chuyển cờ pdFALSE sang pdTRUE trong đúng bốn hàm; hoãn chuyển ngữ cảnh đến vTaskPreemptionEnable()/prvYieldCore().",
+      "Khối cấu hình bốn điều kiện và bảo vệ #if ( configNUMBER_OF_CORES > 1 ) giữ nguyên; phạm vi chỉ SMP và mô tả không ảnh hưởng bản một lõi không đổi.",
+      "Bốn mục kiểm thử vẫn chưa đánh dấu, giữ kịch bản ESP32-S3 với thông báo ISR đồng thời và các tác vụ cùng mức ưu tiên; không khẳng định đã chạy kiểm thử."
+    ]
+  },
+  {
+    "nwo": "Hermione-Granger-1176/artifacts",
+    "pr_number": 24,
+    "result": "pass",
+    "translated_sha256": "0b8bd0b79abd29c2474c053d1f8cd10ff195015503da2b0b194c86297d4c9040",
+    "notes": [
+      "Giữ đủ chín thay đổi bảo mật: env: thay nội suy shell; kiểm tra containment tại hai script Python; hai thẻ meta; thay script nội tuyến và bỏ onload; CSS.escape(); allowlist; quoting/GraphQL; bốn luật ESLint; kiểm thử containment.",
+      "Các tên file, API, target Makefile, biểu thức $(name), ${{ }} và tên quy tắc ESLint giữ nguyên.",
+      "Giữ phạm vi tất cả trang HTML và scaffold, độ bao phủ Python 100%, cùng điều kiện CSP không làm hỏng tải font hoặc Chart.js.",
+      "Cả bốn mục kế hoạch kiểm thử vẫn chưa đánh dấu; không chuyển kế hoạch thành kết quả đã kiểm chứng."
+    ]
+  },
+  {
+    "nwo": "JacobPEvans/ansible-splunk",
+    "pr_number": 120,
+    "result": "pass",
+    "translated_sha256": "99802f1e52aafb37ed2846ef0730e3832d3a89b1c4150bd71d45db5e75557e88",
+    "notes": [
+      "Giữ quy tắc LXC mặc định và Docker chỉ là ngoại lệ Splunk, cùng nguyên nhân tài liệu repo làm AI suy diễn sai chiến lược toàn cục.",
+      "Giữ số dòng CLAUDE.md 145 xuống 71, nguồn Doppler/.envrc, hai hướng dẫn chuyển sang roles/splunk_docker/README.md và xóa .claude/rules/nix-tool-execution.md.",
+      "Giữ phụ thuộc chặn nix-ai#420 và thứ tự chỉ xóa bản quy tắc cục bộ sau khi nix-tool-policy.md toàn cục đã tồn tại.",
+      "Giữ trạng thái bốn mục kiểm thử đã đánh dấu, tham chiếu Splunk MCP app ID, Markdownlint, cấu trúc README Ansible và quy ước Related Files; mọi URL giữ nguyên."
+    ]
+  },
+  {
+    "nwo": "LegionIO/legion-interlink",
+    "pr_number": 16,
+    "result": "pass",
+    "translated_sha256": "731fd53e1478b546660f504fc40630b3dcc3247d31dc093794e4b1687ff3ae2d",
+    "notes": [
+      "Giữ đủ chín công cụ github, brew, wget, jq, tree, python, ollama, klist, jfrog và điều kiện chỉ đăng ký khi tìm thấy binary lúc khởi động.",
+      "Giữ clone obra/superpowers trong lần đầu vào ~/.legionio/skills/, sinh skill.json từ frontmatter SKILL.md, điều kiện shell.enabled và bootstrap lỗi không làm ứng dụng dừng.",
+      "Giữ bốn đường dẫn file, buildCliTools(), bootstrapSuperpowers, ensureAppHome và thứ tự đăng ký CLI sau công cụ shell.",
+      "Cả sáu ô kiểm thử vẫn chưa đánh dấu, kể cả ba dòng nguồn ghi confirmed locally; giữ trường hợp git không khả dụng và thư mục skill mới."
+    ]
+  },
+  {
+    "nwo": "LittleAndi/FileHorizon",
+    "pr_number": 19,
+    "result": "pass",
+    "translated_sha256": "cf24915b0639921fd6df2e17b9715416a66daf4b3c0672739cc4606d47022c2a",
+    "notes": [
+      "Giữ cấu hình Service Bus application properties theo từng destination và kiểm tra ngăn ghi đè reserved key.",
+      "Giữ nén gzip là tùy chọn cho message body và tự động đặt Content-Encoding; không biến nén thành bắt buộc.",
+      "Giữ thay đổi orchestrator/publisher để hợp nhất thuộc tính và xử lý nén, cùng phạm vi unit/integration tests cho validation, merging và compression utilities."
+    ]
+  },
+  {
+    "nwo": "MatthewPeterKelly/fractal-renderer",
+    "pr_number": 163,
+    "result": "pass",
+    "translated_sha256": "53d4a070bb1aa48fc8fb5f046dbf25f429cec7cff4305e9368df842bc0b6eb68",
+    "notes": [
+      "Giữ phạm vi PR 1 trong 3: dependency stack, hello-world và module skeleton; dữ liệu keyframe thực thuộc PR 2/3, chưa bị diễn đạt như tính năng đã hoàn thành.",
+      "Giữ egui/egui-wgpu/egui-winit v0.22 và mô tả retained-mode như nguồn, không tự sửa hoặc bổ sung kiến trúc khác.",
+      "Giữ module 246 dòng và đủ EditorState, init_egui, update_screen_descriptor, render_editor_frame, blit_preview_to_framebuffer, paint_gradient_bar; Vec<Vec<Rgb>> theo thứ tự cột vào nửa trái buffer.",
+      "Giữ cargo rex color-gui-demo, thread nền Mandelbrot, một cửa sổ với trái 640 px/phải 860 px, đủ năm widget; thẻ ảnh 1500 × 480 và URL giữ nguyên."
+    ]
+  },
+  {
+    "nwo": "Mirkiux/featkit",
+    "pr_number": 17,
+    "result": "pass",
+    "translated_sha256": "344adeecb06942fd0008ad4f84d8392b36f0d40f7e1970b2cf4546dde8a22b75",
+    "notes": [
+      "Giữ PySparkCodeGenerator, đường dẫn databricks.py, build_* và đoạn code độc lập; MOB dùng crossJoin()+row_number().",
+      "Giữ Layer 2A groupBy().agg()/F.when(), Layer 2B DataFrame tỷ phần theo bộ categorical/measurement/aggregator rồi tính metric phân phối và left-join về base.",
+      "Giữ Layer 3 Window.partitionBy().orderBy()/rowsBetween(), ghi đè generate() để thêm import một lần và xác minh cú pháp ast.parse.",
+      "Giữ 44 bài kiểm thử và mô tả 44/44 tại máy cục bộ, Ruff lint/format sạch, không có .collect() hoặc .show(); ba ô kiểm thử đã đánh dấu không đổi."
+    ]
+  },
+  {
+    "nwo": "NKUST-ITC/NKUST-AP-Flutter",
+    "pr_number": 349,
+    "result": "pass",
+    "translated_sha256": "8efade8ded0701421965bcd60a6c2a0d2d62a63866b72c9ec916f9b549dc6ba0",
+    "notes": [
+      "Đã đối chiếu đầy đủ title/body: giữ hai tầng L1/L2, tất cả trạng thái WebApSessionState, xác thực single-flight qua _loginFuture và xác minh sau đăng nhập.",
+      "Giữ nguyên điều phối bắt tay theo từng leave/stdsys/mobile/oosaf, vô hiệu hóa tập trung, thử lại bằng vòng lặp và chờ lùi có giới hạn; mô tả tiếng Hoa về chờ lùi cấp số nhân được dịch đúng.",
+      "Giữ resetSessionMachine và checkLogin làm lớp tương thích deprecated chuyển tiếp tới ensureAuthenticated; khối Dart và Mermaid giữ nguyên từng ký tự, gồm chú thích và nhãn tiếng Hoa.",
+      "Không thêm điều kiện, trạng thái kiểm thử hoặc đáp án ngoài mô tả nguồn."
+    ]
+  },
+  {
+    "nwo": "NestDevLab/nestjs-yalc",
+    "pr_number": 123,
+    "result": "pass",
+    "translated_sha256": "b43991d5d16a5a7718079e8ac72ca5ff4013134af03e5c2059a817c4f6f135df",
+    "notes": [
+      "Đã đối chiếu toàn bộ phạm vi nền tảng OmniKernel, DTO/CRUD-Gen/GraphQL, kiểm thử metadata và đăng ký module, cùng phần tài liệu cụ thể đầu tiên được gộp vào một PR.",
+      "Giữ GUID, timestamps, các entity/record/relation/reference tổng quát và đủ các trường tài liệu subtype, content, MIME, source URL, publication timestamp.",
+      "Giữ quyết định bỏ aiContext, documentKind so với kind=document, đăng ký enum tường minh và bỏ việc cung cấp lại EventEmitter2 cùng @Global().",
+      "Hai command kiểm tra giữ nguyên hoàn toàn, gồm NODE_OPTIONS và các cờ Jest/ESLint; không tự khẳng định kết quả kiểm tra."
+    ]
+  },
+  {
+    "nwo": "NightHawkATL/ntp-dashboard",
+    "pr_number": 84,
+    "result": "pass",
+    "translated_sha256": "482c21c211029905e45180abf73b6bf789ed15c4bd63e4d70486f5dd0fb0e4dd",
+    "notes": [
+      "Đã đối chiếu nguyên nhân PWA dùng tài nguyên cũ lâu hơn tab trình duyệt và khác biệt hành vi sau bản phát hành.",
+      "Giữ tên SKIP_WAITING, điều kiện same-origin/GET-only, API network-only và stale-while-revalidate riêng cho tài nguyên tĩnh.",
+      "Giữ thứ tự cập nhật worker đang chờ, updatefound/install và tải lại đúng một lần trên controllerchange; hai xác nhận kiểm tra có sẵn được dịch đúng."
+    ]
+  },
+  {
+    "nwo": "Nixbug/entebus-web-executive",
+    "pr_number": 120,
+    "result": "pass",
+    "translated_sha256": "d8daf141d88a565bd402c4be62e3ac1c851be4473a740a3d9d0ed270d86a5d83",
+    "notes": [
+      "Đã đối chiếu API lấy công ty, phân trang/tìm kiếm/lọc backend và hiển thị bảng/trang chi tiết.",
+      "Giữ dữ liệu vị trí là chuỗi WKT và component bản đồ dùng OpenLayers; giữ đủ ba bước xác minh giao diện.",
+      "Cả năm mục tự review vẫn được đánh dấu [x], điều kiện cục bộ hoặc staging được giữ; hai mục N/A không bị bổ sung nội dung."
+    ]
+  },
+  {
+    "nwo": "OpenDevicePartnership/embedded-services",
+    "pr_number": 793,
+    "result": "pass",
+    "translated_sha256": "6c600f471918adad0e31c6645e04e6e41fd529f38786bdb7e70b87107c6afcb2",
+    "notes": [
+      "Đã đối chiếu điều kiện panic khi giữ mutex và lý do lock().await deadlock trong trình xử lý panic; try_lock cho phép thử truy cập không chặn và xử lý thất bại.",
+      "Giữ tên PartitionGuard, Partition, partition-manager, lock/try_lock, các trait BlockDevice/ReadNorFlash/NorFlash và TryLockError được export lại từ embassy_sync.",
+      "Giữ checked arithmetic cho mọi offset/kích thước phân vùng và đủ các nhóm kiểm thử đọc/ghi/xóa, ngoài giới hạn, tràn số, tranh chấp khóa."
+    ]
+  },
+  {
+    "nwo": "PaulStSmith/PostmanOpenAPIConverter",
+    "pr_number": 7,
+    "result": "pass",
+    "translated_sha256": "737d3af63e50f7e13f6d3271d87d543511be5bd9dd63c8c940df465a874d2bda",
+    "notes": [
+      "Đã đối chiếu mục tiêu phân phối artifact và bảo mật; cả bản portable lẫn installer đều là ZIP và đều có chứng thực nguồn gốc bản dựng.",
+      "Giữ đúng thay đổi release.yml về tạo/chứng thực/tải lên và mở rộng quyền attestation; README.md hướng dẫn xác minh bằng GitHub CLI.",
+      "Không thêm yêu cầu kiểm thử, mức bảo mật hoặc loại artifact ngoài nguồn."
+    ]
+  },
+  {
+    "nwo": "ROCm/TransferBench",
+    "pr_number": 256,
+    "result": "pass",
+    "translated_sha256": "2bccf73d44ff7480e7ba77f0b253082f945f13ae7d9cc275855bb5001caf6651",
+    "notes": [
+      "Đã đối chiếu mục tiêu dễ nhập bảng tính/theo dõi bộ tùy chọn tốt nhất và cho phép nhiều Transfers/ký tự đại diện trong preset gfxsweep.",
+      "Phần chi tiết kỹ thuật vẫn chỉ mô tả viết lại một số phần preset, không tự thêm thuật toán hoặc kết luận hiệu năng.",
+      "Khối đầu ra mẫu giữ nguyên toàn bộ, gồm mọi cấu hình, đơn vị CPU-timed GB/s, 1048576 byte mỗi Transfer, số đo và cấu hình bandwidth cao nhất 12.82 GB/s."
+    ]
+  },
+  {
+    "nwo": "Serapieum-of-alex/statista",
+    "pr_number": 130,
+    "result": "pass",
+    "translated_sha256": "33cb3625ada2bced6a7e212b73040b5ab3a0955f1af7d582096818fe6def76ad",
+    "notes": [
+      "Đã đối chiếu title thay đổi giấy phép và tham chiếu Fixes #131; body dạng mẫu còn nguyên ý yêu cầu cung cấp mô tả, bối cảnh, dependency và cách tái hiện kiểm thử.",
+      "Giữ đủ loại thay đổi và tất cả trạng thái [ ] chưa hoàn thành, gồm Test A/Test B và checklist cuối; không biến nội dung mẫu thành khẳng định đã kiểm thử.",
+      "Giữ nguyên các đường dẫn/nhãn kỹ thuật không đặt trong backtick: CI/pyproject.toml/docs/examples/testing, pyproject.toml, docs/change-log.md và README."
+    ]
+  },
+  {
+    "nwo": "SiaFoundation/indexd",
+    "pr_number": 939,
+    "result": "pass",
+    "translated_sha256": "6a9a3c4553bdc0fcfa26b31bfa37e4f9298f281a019efaf23ad0f364e07d4ba5",
+    "notes": [
+      "Đối chiếu toàn bộ title/body: giữ mục đích endpoint tổng hợp metrics để đơn giản hóa cấu hình scraper.",
+      "Không thêm yêu cầu, kết quả kiểm thử hay nội dung review ngoài mô tả PR gốc."
+    ]
+  },
+  {
+    "nwo": "T-K-233/Actuator-Control",
+    "pr_number": 7,
+    "result": "pass",
+    "translated_sha256": "1c5bbef16c3de9a1644e35b484bda61d67240f2a870cb133e3214c5a29e10d0d",
+    "notes": [
+      "Giữ fault_list, set(), dict.fromkeys, receive_status_frame() và _update_fault_status đúng nguyên văn.",
+      "Giữ mục đích ổn định thứ tự bằng list + dedup; áp dụng ở cả hai call site.",
+      "Giữ cả bốn mục checklist đã chọn và kết quả parallel_validation với CodeQL: 0 alerts."
+    ]
+  },
+  {
+    "nwo": "TrossenRobotics/trumi",
+    "pr_number": 7,
+    "result": "pass",
+    "translated_sha256": "c51b6481e9c9ae8bd4e7fb3247f62db5267db474f1d8cdbd1d1f533f9190020e",
+    "notes": [
+      "Giữ tất cả đường dẫn script/module, dataset_plan.pkl, dataset.zarr, dataset.zarr.zip, pyproject.toml, diffusion_policy, \\__init__.py và scripts/visualize_trajectory.py.",
+      "Giữ ghép video thành episode, xác định phần cứng gripper, phân đoạn sub-episode hợp lệ, replay buffer Zarr với ảnh nén và trạng thái robot.",
+      "Giữ chunking/compression, JPEG XL, SLERP cho rotation, hiệu chuẩn gripper và đưa package vào wheel.",
+      "Giữ thay print bằng logger, điều kiện làm xong PR #6 trước, cả hai command uv run python và các đầu ra cần xác minh."
+    ]
+  },
+  {
+    "nwo": "Tzeusy/butlers",
+    "pr_number": 1021,
+    "result": "pass",
+    "translated_sha256": "ae495fc29adcbcf62000c93c5b36e56570e0308eff0dfe61446d981e1e2ec72c",
+    "notes": [
+      "Giữ số lượng 17 lỗi có trước, đủ bảy tên file test không đặt trong backtick và nhãn bu-pi34g.",
+      "Giữ nguyên nhân mock pool.fetchrow() thiếu khiến RuntimeConfigAccessor.seed_if_empty() raise RuntimeError hoặc trả RuntimeConfig sai với core_groups=(), chặn mọi core tool ngoại trừ route.execute.",
+      "Giữ hai helper _make_runtime_config_row()/_make_fetchrow_side_effect(), runtime_config queries nhận hàng phù hợp, mọi truy vấn khác nhận None và hỗ trợ async context manager pool.acquire().",
+      "Giữ 89 test đạt thay vì 72/89, E501 có từ trước, lỗi integration cần Docker ngoài phạm vi và CLI test_discovers_and_skips_invalid không liên quan; giữ bốn checklist đã chọn và link attribution."
+    ]
+  },
+  {
+    "nwo": "UniverseCitiz3n/msgraph-kb-mcp",
+    "pr_number": 2,
+    "result": "pass",
+    "translated_sha256": "4d8b06545bba101f29eef50f0f51babff3ba6f1ec881452803f16f49ca0b2f85",
+    "notes": [
+      "Giữ hai trường bắt buộc type: local và tools: [*], ngữ nghĩa local-spawned stdio và không có tools nếu bỏ trường.",
+      "JSON MCP code block giữ nguyên mọi key/value, npx args và github:UniverseCitiz3n/msgraph-kb-mcp.",
+      "Giữ link GitHub Mobile, các nền tảng iOS/Android và comment đánh dấu Copilot tips; không thêm cấu hình hay yêu cầu."
+    ]
+  },
+  {
+    "nwo": "VeyronSakai/UniCortex",
+    "pr_number": 162,
+    "result": "pass",
+    "translated_sha256": "30d5cac8c5d3017c918cb619f4624a2466d267bb473a4d05636ea3c234643274",
+    "notes": [
+      "Giữ tất cả tool names, CLI commands, API routes, class/API identifiers kể cả MovieRecorderSettings không đặt trong backtick.",
+      "Giữ get_all_recorders trả mọi loại cùng type, add/remove/start/stop chỉ Movie có type validation; chỉ số global cho mọi loại, remove/start kiểm tra loại tại index.",
+      "Giữ RecorderControllerSettings.GetGlobalSettings() chia sẻ với Recorder Window, LoadSerializedFileAndForget tạo instance mới và một lần gọi để tránh mismatch.",
+      "Giữ biểu thức OutputFile + \".\" + EncoderSettings.Extension để tránh lỗi BuildAbsolutePath; RecorderFps dùng chung và hai enum MovieRecorderEncoderType/MovieRecorderEncodingQuality riêng Movie.",
+      "Giữ 225 Unity Editor tests, 69 Core integration tests, các build Core/MCP/CLI, kiểm tra MCP/CLI và cả năm checklist đã chọn."
+    ]
+  },
+  {
+    "nwo": "YasserShkeir/django-smart-ratelimit",
+    "pr_number": 25,
+    "result": "pass",
+    "translated_sha256": "0c23e9fb655dafe6a7a2f941e679a8a447b1ec41f4077426f87599b3f9058759",
+    "notes": [
+      "Giữ việc lưu bền vững token bucket trong database; kiểm thử thủ công memory/database chứng minh xóa trạng thái giữa các lần chạy và migration mới thêm cột data.",
+      "Giữ toàn bộ trạng thái checklist, gồm chưa thêm test/chưa thử nhiều phiên bản Django/Python, các test hiện tại và manual test đạt, migration/config update cần thiết và tương thích ngược.",
+      "Giữ nguyên Python code block @rate_limit(key='user', rate='10/m'), my_view(request), comment và pass.",
+      "Giữ black/flake8/mypy, type hints/docstrings, pre-commit, issue #24, placeholder Closes #(issue number), link Discussions và mọi hướng dẫn template; không biến các ô chưa chọn thành kết quả đã thực hiện."
+    ]
+  },
+  {
+    "nwo": "ZhuoZhuoCrayon/throttled-py",
+    "pr_number": 135,
+    "result": "pass",
+    "translated_sha256": "76d78a27c0580d0af3060c7dc4552eadbb08a2a62ef3dbd59780aadfe422f106",
+    "notes": [
+      "Giữ quy tắc Throttled đồng bộ chỉ Hook, bất đồng bộ chỉ AsyncHook, sai kiểu gây TypeError và _ALLOWED_HOOK_TYPES phân biệt hai chế độ.",
+      "Giữ lý do kiểm tra kế thừa có chủ đích: call_next có kiểu trả về khác nhau, duck typing không phân biệt dẫn đến silent failure.",
+      "Giữ tuple thay list bất biến, logger từng module throttled.hooks/throttled.asyncio.hooks, except Exception thay bằng logger.exception(), đường dẫn docs/source/advance_usage/hooks.rst.",
+      "Giữ đủ bốn checklist đã chọn, quyền maintainer push/squash và hướng dẫn bỏ chọn nếu tự squash; giữ #134, footnote không NullHandler, Python 3.2+ và stderr mặc định."
+    ]
+  },
+  {
+    "nwo": "agent-sh/agentsys",
+    "pr_number": 298,
+    "result": "pass",
+    "translated_sha256": "01ab670a268c98148a6ca35f6b554324f18ba0226630db475b74d326bec7c57d",
+    "notes": [
+      "Đối chiếu toàn bộ title/body: giữ tự động đồng bộ lib/ và CLAUDE.md từ agent-core.",
+      "Giữ chính xác CLAUDE.md, lib/, agent-core và URL https://github.com/agent-sh/agent-core; không thêm hành vi hay kết quả."
+    ]
+  },
+  {
+    "nwo": "alexbol99/flatten-js",
+    "pr_number": 244,
+    "result": "pass",
+    "translated_sha256": "d2f4886646ae30b42336b3b2cb429e50640ed2f364202bff65e9f9bc26298c54",
+    "notes": [
+      "Đã đối chiếu title: giữ codex/fix và số 243; subtract sliver được diễn đạt là mảnh dư mỏng trong phép trừ.",
+      "Giữ đúng hai phiên bản 1.6.9 và 1.6.10, điều kiện phần chồng lấn gần song song và phép trừ Boolean.",
+      "Không thêm nguyên nhân, thuật toán sửa lỗi hoặc kết quả kiểm thử ngoài ba gạch đầu dòng nguồn."
+    ]
+  },
+  {
+    "nwo": "andresharpe/dotbot",
+    "pr_number": 131,
+    "result": "pass",
+    "translated_sha256": "1196ced717efbf541e11e7ea69dee6ff679167ba4802704b6b820489f3ed81b0",
+    "notes": [
+      "Đã đối chiếu cây thư mục phân cấp trong tab Product, mở rộng/thu gọn, file không phải Markdown và placeholder chứa tên/kích thước.",
+      "Giữ API Get-ProductList và các trường depth/type/size, quét mọi loại file thay vì chỉ .md nhưng loại trừ .gitkeep, renderer đệ quy và kiểu làm mờ file nhị phân.",
+      "Ba đường dẫn file giữ nguyên; cả sáu mục [x] giữ đúng ý về hiển thị Markdown, lưu trạng thái qua đổi tab, thứ tự mission/entity-model/tech-stack/roadmap và kiểm thử tầng 1-3 không hồi quy; giữ Closes #31."
+    ]
+  },
+  {
+    "nwo": "arolariu/arolariu.ro",
+    "pr_number": 615,
+    "result": "pass",
+    "translated_sha256": "2e6f939ffe3b2b246f98b2fb43ad8ea4d1ac08f734ca52778bae8ef2cad9f25f",
+    "notes": [
+      "Đã đọc và đối chiếu đầy đủ title/body. Title giữ đủ ý hot reload, workspace và tài liệu; phần mở đầu/kết thúc giữ đúng phạm vi cải thiện môi trường phát triển cục bộ của monorepo và quy trình nhiều stack.",
+      "Giữ đủ ba file workspace frontend/backend/fullstack, các thư mục được cấu hình sẵn, extension khuyến nghị, cấu hình khởi chạy/debug và task cho mọi dịch vụ chính.",
+      "Giữ thay đổi .vscode/launch.json với API (.NET), dịch vụ exp (Python), DocFX và cấu hình tổ hợp Full Stack để debug đồng thời; không đổi tên định danh dù không đặt trong backtick.",
+      "Giữ .env.example làm nguồn tham chiếu tập trung cho mọi biến môi trường và cả ba loại thiết lập cục bộ, Docker, production.",
+      "Giữ hỗ trợ Python 3.12, cổng backend/exp cùng nhãn, postStartCommand tự động tạo file và khuyến nghị extension fullstack trong .devcontainer/devcontainer.json.",
+      "Đã kiểm tra máy: metadata ngoài title/body khớp tuyệt đối; toàn bộ 7 đoạn inline code, 10 URL diffhunk và chuỗi 176 token số giữ nguyên thứ tự. Không thêm yêu cầu, kết quả kiểm thử hoặc đáp án ngoài nguồn."
+    ]
+  }
+]

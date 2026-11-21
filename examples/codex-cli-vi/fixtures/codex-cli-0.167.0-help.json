@@ -1,0 +1,5 @@
+{
+  "version": "codex-cli 0.167.0",
+  "exec_help": "Usage: codex exec [OPTIONS] [PROMPT]\nArguments: [PROMPT]\nIf stdin is piped and a prompt is also provided, stdin is appended as a <stdin> block\nOptions: --sandbox <SANDBOX_MODE> [read-only]\n--cd <DIR>\n--model <MODEL>\n--ephemeral\n-c, --config <key=value>\n--color <COLOR>\n--output-schema <FILE>\n--output-last-message <FILE>",
+  "review_help": "Usage: codex exec review [OPTIONS] [PROMPT]\nOptions: --base <BRANCH>\n--commit <SHA>\n--title <TITLE>"
+}

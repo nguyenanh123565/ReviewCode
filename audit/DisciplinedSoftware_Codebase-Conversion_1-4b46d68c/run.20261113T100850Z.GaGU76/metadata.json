@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "run_id": "run.20261113T100850Z.GaGU76",
+  "started_at": "2026-11-13T10:08:51.458Z",
+  "updated_at": "2026-11-13T10:09:33.050Z",
+  "finished_at": "2026-11-13T10:09:33.050Z",
+  "pr": {
+    "repo": "https://github.com/DisciplinedSoftware/Codebase-Conversion",
+    "nwo": "DisciplinedSoftware/Codebase-Conversion",
+    "pr_number": 1,
+    "base": "ed10728c91f7858a0bd95a97c754f4bd6c0487ec",
+    "head": "4b46d68c215dd2448a62f751e81218a0da789165"
+  },
+  "diff": {
+    "sha256": "9096ac3342141ae6a3e63b9ffdb904419cd9488260b021b4ebff63fa84d50c21",
+    "size_bytes": 173833
+  },
+  "prompt": {
+    "sha256": "1bfd0ab8c45c15152c7d4606d8a203282fce03ceecb9934c20cbc324fee727d3",
+    "size_bytes": 10947
+  },
+  "codex": {
+    "version": "0.167.0",
+    "model": "gpt-5-mini",
+    "reasoning_effort": "medium"
+  },
+  "review_language": "vi",
+  "status": "parse_failed",
+  "raw_response": {
+    "file": "codex-response.json",
+    "sha256": "76e1498118380afebec5a9f3e6f3f14849236cfd9b5adb2ae83007bb2eccd8f9",
+    "size_bytes": 2488
+  },
+  "raw_response_status": "saved",
+  "parser": {
+    "status": "failed",
+    "error": "findings[0] does not satisfy AGENT_CONTRACT.md"
+  },
+  "findings": null,
+  "error": "findings[0] does not satisfy AGENT_CONTRACT.md"
+}

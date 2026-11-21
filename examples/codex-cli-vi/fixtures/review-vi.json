@@ -1,0 +1,12 @@
+{
+  "findings": [
+    {
+      "priority": "P2",
+      "file": "src/pattern.ts",
+      "start_line": 18,
+      "end_line": 20,
+      "title": "Giới hạn độ dài chưa ngăn được biểu thức chính quy tốn nhiều tài nguyên",
+      "explanation": "Với mẫu lồng nhau do người dùng cung cấp, bộ máy vẫn có thể backtracking theo cấp số nhân trước khi áp dụng kiểm tra giới hạn; request hợp lệ có thể làm cạn CPU."
+    }
+  ]
+}
